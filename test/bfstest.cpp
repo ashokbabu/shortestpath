@@ -19,7 +19,6 @@ class BfsTest : public CppUnit::TestFixture
 	void test_bfs()	{
 		Bfs bfs;
 		auto_ptr< Bfs > bfs( new Bfs( A,G ) );
-		cout<<"Testing Bfs :Peg, for creating a PEG and checking its state: ";
 		/* //usage
 		CPPUNIT_ASSERT_EQUAL( ,  );	
 		*/
