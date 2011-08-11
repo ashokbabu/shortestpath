@@ -27,7 +27,7 @@ bool Bfs::traverse() {
     bfsQueue.push(source);
     mDistSrc[source] = 0; 
     
-    node_t v, w;
+    node_t v;
     cout << "Traverse Nodes:" <<endl;
     while(!bfsQueue.empty() && !targetFound) {
         v = bfsQueue.front();
@@ -92,12 +92,10 @@ vector<node_t> Bfs::get_shortestpath_nodes() const {
 
 void Bfs::backtrace() {
     
-    node_t source  = get_source();
     node_t target  = get_target();
 
     mShortPathNodes.resize(mDistSrc.find(target)->second + 1);
     mShortPathNodes[mDistSrc.find(target)->second] = target;
-    bool targetFound = false;
     unsigned int cur_path_len = mDistSrc.find(target)->second; 
     unsigned int i = mDistSrc.find(target)->second - 1;
     while(cur_path_len > 0) {
