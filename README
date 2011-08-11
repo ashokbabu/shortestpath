@@ -1,0 +1,21 @@
+Finds Shortest path between source node and target node.
+Graph is created by taking nodes data from file.
+
+Usage: ./shortestpath <FileName> <SourceNode> <Target Node>
+
+Sample Test File Data
+A B G
+B C
+C A E
+D H F
+E A D G
+F H
+G C F
+H G
+
+Eg: say first line
+A has Two outgoing nodes B & G, also  A is an incoming node to B & G
+A->B
+A->G
+
+Diagram representation of this data set can be found.
