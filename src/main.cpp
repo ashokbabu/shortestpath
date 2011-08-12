@@ -59,6 +59,17 @@ int main(int argc, char *argv[])
         istringstream trg(trgnode);
         trg >> target;
 
+	if(!mGraph->is_vertex_present(source)){
+	  cout<<endl << "Source Node not present in the Graph"<<endl;
+	  return FAILURE;
+	}
+
+	if(!mGraph->is_vertex_present(target)){
+	  cout << endl<<"Target Not Found in the Graph"<<endl;
+	  return FAILURE;
+	}
+
+
         PathFinder *pathFinder;
         pathFinder = new Bfs(source,target);
         if(!pathFinder->traverse()){
